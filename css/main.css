@@ -1,0 +1,10 @@
+.segment {
+	border: 1px solid black;
+	height: 100vh;
+}
+
+.item {
+	height: 30px;
+	border: 1px solid black;
+	margin: 10px 0;
+}
