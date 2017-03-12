@@ -4,9 +4,16 @@ $(document).ready(function($) {
 			$('#burger-builder').sortable({
 				revert: true,
 				start: function(event, ui) {
-					var padding = parseInt($('#burger-builder').css('padding-top'));
-					padding -= $(ui.item).height() + 22;
-					$('#burger-builder').css('padding-top', padding);
+					if(!$(ui.item).hasClass('dropped')) {
+						var padding = parseInt($('#burger-builder').css('padding-top'));
+						console.log($(ui.item));
+						console.log($(ui.item).height());
+						console.log(padding);
+						padding -= ($(ui.item).height() - 2);
+						console.log(padding);
+						$('#burger-builder').css('padding-top', padding);
+						$(ui.item).addClass('dropped');
+					}
 				}
 			});
 			$('.draggable').draggable({
@@ -14,7 +21,7 @@ $(document).ready(function($) {
 				helper: 'clone',
 				revert: 'invalid'
 			});
-			$('ul li').disableSelection();
+			$('ul, li').disableSelection();
 	});
 
 	
