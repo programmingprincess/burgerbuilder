@@ -3,7 +3,6 @@ h1 {
 }
 
 .title {
-	background-color: #B44B32;
 	color: #fff;
 	padding: 20px 0;
 }
@@ -15,20 +14,29 @@ h1 {
 }
 
 .burger-builder {
-	height: 100%;
-	padding-top: calc(100vh - 20px);
-	padding-bottom: 10px;
+	width: 100%;
+	padding-left: 0;
+	padding-top: calc(100vh - 80px);
+	margin: 0;
+	/* padding-bottom: 10px; */
+	background-color: #fcfcfc;
 }
 
 .burger-builder li {
+	width: 100%!important;
 	margin: -5px 0;
 }
 
+.left-col {
+	background-color: #B44B32;
+}
+
 .right-col {
-	border: 2px dashed #B44B32;
+	padding: 0;
 }
 
 .segment {
+	/* width: 100%; */
 	height: 100%;
 	text-align: center;
 }
@@ -59,4 +67,11 @@ h1 {
 
 .cheese img {
 	max-height: 200%;
+}
+
+.cutting-board {
+	background-color: #FFCF8C;
+	height: 80px;
+	margin: 0;
+	padding: 0;
 }
