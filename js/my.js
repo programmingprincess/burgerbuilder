@@ -1,15 +1,21 @@
 $(document).ready(function($) {
 
-	$('#burger-list').sortable({
-		connectWith: '#burger-builder',
-		start: function(event, ui) {
-			var padding = parseInt($('#burger-builder').css('padding-top'));
-			padding -= $(ui.item).height() + 22;
-			$('#burger-builder').css('padding-top', padding);
-		}
+	$(function() {
+			$('#burger-builder').sortable({
+				revert: true,
+				start: function(event, ui) {
+					var padding = parseInt($('#burger-builder').css('padding-top'));
+					padding -= $(ui.item).height() + 22;
+					$('#burger-builder').css('padding-top', padding);
+				}
+			});
+			$('.draggable').draggable({
+				connectToSortable: '#burger-builder',
+				helper: 'clone',
+				revert: 'invalid'
+			});
+			$('ul li').disableSelection();
 	});
-
-	$('#burger-builder').sortable();
 
 	
 

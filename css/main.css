@@ -1,3 +1,8 @@
+.burger-list {
+	position: absolute;
+	bottom: 0;
+}
+
 .burger-builder {
 	height: 100%;
 	padding-top: 100%;
