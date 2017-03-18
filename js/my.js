@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+	$(document).ready(function($) {
 	var price = 0;
 
 	$('.cutting-board').click(function(){
